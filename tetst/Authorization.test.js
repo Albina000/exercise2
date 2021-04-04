@@ -58,3 +58,17 @@ test ('Токен содержит недопустимые символы', () 
     expect(() => auth.getToken(inputString)).toThrow('Недопустимый символ');
 
 });
+
+
+test ('Плохой префикс', () => {
+    //Arrange
+    let auth = new Authorization();
+
+    const inputString = 'Bear $CVVCHjTylu2lMtEf5wjljd5VvBkuizKYGITwAoV75XXj5uiv30MLYtINF';
+       
+    //Act
+       
+    //Assert
+    expect(() => auth.getToken(inputString)).toThrow('Недопустимый префикс');
+
+});
