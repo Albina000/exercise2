@@ -1,5 +1,9 @@
 class Authorization {
+   
     getToken(str) {
+        if (str === '') {
+            return null;
+        }
         return str.slice(7);
     }
 }
