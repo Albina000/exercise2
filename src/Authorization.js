@@ -4,6 +4,9 @@ class Authorization {
         if (str === '') {
             return null;
         }
+        if (str.length < 17) {
+            throw new Error("Токен меньше 10 символов"); 
+        }
         return str.slice(7);
     }
 }
