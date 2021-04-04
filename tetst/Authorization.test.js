@@ -1,6 +1,6 @@
 const {Authorization} = require('../src/Authorization.js');
  
- test ('Правильный токен', () => {
+test ('Правильный токен', () => {
     //Arrange
     let auth = new Authorization();
 
