@@ -29,3 +29,18 @@ test ('Пустая строка', () => {
     expect(token).toBeNull();
 
 });
+
+
+test ('Длина токена меньше 10 символов', () => {
+    //Arrange
+    let auth = new Authorization();
+
+    const inputString = 'Bearer vCVVCHjTy';
+   
+    //Act
+   
+    //Assert
+    expect(() => auth.getToken(inputString)).toThrow('Токен меньше 10 символов');
+
+
+});
