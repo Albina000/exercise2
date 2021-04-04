@@ -44,3 +44,17 @@ test ('Длина токена меньше 10 символов', () => {
 
 
 });
+
+
+test ('Токен содержит недопустимые символы', () => {
+    //Arrange
+    let auth = new Authorization();
+
+    const inputString = 'Bearer $CVVCHjTylu2lMtEf5wjljd5VvBkuizKYGITwAoV75XXj5uiv30MLYtINF';
+       
+    //Act
+       
+    //Assert
+    expect(() => auth.getToken(inputString)).toThrow('Недопустимый символ');
+
+});
