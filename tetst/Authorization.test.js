@@ -14,3 +14,18 @@ test ('Правильный токен', () => {
     expect(token).toBe(expectedToken);
 
 });
+
+
+test ('Пустая строка', () => {
+    //Arrange
+    let auth = new Authorization();
+
+    const inputString = '';
+    
+    //Act
+    const token = auth.getToken(inputString);
+
+    //Assert
+    expect(token).toBeNull();
+
+});
